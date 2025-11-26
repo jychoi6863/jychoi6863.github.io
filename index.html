@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <title>Jun-young Choi</title>
 
-    <!-- IBM Plex Sans (2025~2026년 최고의 학술+컴퓨테이션 폰트) -->
+    <!-- IBM Plex Sans – 학술+컴퓨테이션 최고의 sans-serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@430;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
       font-size: 11pt;
       color: #2c2c2c;
       font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-      font-weight: 430;           /* 400보다 살짝 굵직해서 가독성+학술감 ↑ */
+      font-weight: 430;
       line-height: 1.58;
       letter-spacing: -0.004em;
       margin: 0em 5em;
@@ -27,9 +27,9 @@
       background-color: #fffff9;
       width: 720px;
       padding: 2em;
+      margin: 0 auto;  /* 테이블 없이도 가운데 정렬 보장 */
     }
 
-    /* 제목은 small-caps 절대 금지 → 그냥 보통 굵기만 */
     h1, h2, h3, h4, h5, h6, p.description {
       font-family: inherit;
       font-weight: 600;
@@ -39,7 +39,7 @@
     h1 {
       text-align: center;
       font-size: 19pt;
-      font-weight: 700;           /* 이름만 살짝 더 굵게 */
+      font-weight: 700;
       margin: 0 0 0.4em 0;
     }
 
@@ -47,6 +47,7 @@
       font-weight: 600;
       font-size: 11pt;
       margin-bottom: 2ex;
+      margin-top: 2.5ex;
     }
 
     dd {
@@ -55,14 +56,25 @@
     }
 
     ul {
-      list-style-type: none;
+      list-style: none;
       padding-left: 0;
+      margin: 0.8em 0;
     }
 
+    /* 여기부터가 핵심: 왼쪽 여백 + • bullet 예쁘게 */
     dd ul li {
-      margin-bottom: 0.8ex;
-      margin-left: -20px;
-      text-indent: -20px;
+      position: relative;
+      padding-left: 1.6em;     /* 왼쪽 여백 확보 */
+      margin-bottom: 0.7ex;
+      text-indent: 0;
+    }
+
+    dd ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #336699;
+      font-weight: 600;
     }
 
     .c { text-align: center; }
@@ -76,7 +88,6 @@
       text-decoration: underline;
     }
 
-    /* 이메일만 약간 더 또렷하게 (선택) */
     .email { font-weight: 500; }
     -->
     </style>
@@ -84,40 +95,37 @@
 
   <body>
     <div align="center">
-      <table border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td id="div0">
-            <h1><nobr>JUN-YOUNG CHOI</nobr></h1>
-            <p class="c">Ph.D. Candidate in Economics, Graduate School, Korea University</p>
+      <div id="div0">   <!-- table 없애고 div로 대체 (더 깔끔) -->
+        <h1><nobr>JUN-YOUNG CHOI</nobr></h1>
+        <p class="c">Ph.D. Candidate in Economics, Graduate School, Korea University</p>
 
-            <dl>
-              <dt>Curriculum Vitae</dt>
-              <dd><a href="cv.pdf" target="_blank">October 2025</a></dd>
+        <dl>
+          <dt>Curriculum Vitae</dt>
+          <dd><a href="cv.pdf" target="_blank">October 2025</a></dd>
 
-              <dt>Education</dt>
-              <dd><ul>
-                <li>February 2026: (Expected) Ph.D. in Economics, Korea University (Advisor: Seik Kim)</li>
-                <li>February 2019: M.A. in Economics, Korea University</li>
-                <li>August 2013: B.A. in Economics, Kyungpook National University (Mathematics Minor)</li>
-              </ul></dd>
+          <dt>Education</dt>
+          <dd><ul>
+            <li>February 2026: (Expected) Ph.D in Economics, Korea University (Advisor: Seik Kim)</li>
+            <li>February 2019: M.A. in Economics, Korea University</li>
+            <li>August 2013: B.A. in Economics, Kyungpook National University (Mathematics Minor)</li>
+          </ul></dd>
 
-              <dt>Current Research Interests</dt>
-              <dd><ul>
-                <li>Labor Economics (Unemployment, Household decision)</li>
-                <li>Applied Microeconometrics</li>
-                <li>Semiparametrics and Flexible Modeling (Generalized Additive Models)</li>
-                <li>Partial Identification and Mixture Models (EM algorithm)</li>
-                <li>Duration Analysis with Unobserved Heterogeneity (Discrete-time Frailty Models)</li>
-              </ul></dd>
+          <dt>Current Research Interests</dt>
+          <dd><ul>
+            <li>Policy Effect Estimation using Finite Sample</li>
+            <li>Statistical Modelings on Household Decision</li>
+            <li>Generalized Additive Models with Tensor-product</li>
+            <li>Partial Identification/Labeling Models</li>
+            <li>Discrete-time Frailty Models</li>
+            <li>Predictions using Machine Learning/Reinforcement Learning</li>
+          </ul></dd>
 
-              <dt>Contact</dt>
-              <dd><ul>
-                <li>Email: <span class="email">jychoi6863@korea.ac.kr</span></li>
-              </ul></dd>
-            </dl>
-          </td>
-        </tr>
-      </table>
+          <dt>Contact</dt>
+          <dd><ul>
+            <li>Email: <span class="email">jychoi6863@korea.ac.kr</span></li>
+          </ul></dd>
+        </dl>
+      </div>
     </div>
 
     <div align="center" style="margin:2em; font-size:9pt;">
