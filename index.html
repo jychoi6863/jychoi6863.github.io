@@ -24,6 +24,14 @@
       background-color: #cccccc;
     }
 
+      dt::before {
+  content: "\25A0"; /* Unicode for blacksquare (■), similar to LaTeX \blacksquare */
+  color: #7A96EA; /* Equivalent to RoyalBlue!70: a 70% tint of RoyalBlue (#4169E1) mixed with 30% white */
+  font-size: 0.8em; /* Slightly smaller like \footnotesize in LaTeX; adjust if needed */
+  margin-right: 0.5em; /* Adds space between the bullet and the <dt> text */
+  vertical-align: middle; /* Aligns the bullet nicely with the text */
+}
+      
     #div0 {
       background-color: #fffff9;
       width: 720px;
