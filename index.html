@@ -30,6 +30,15 @@
       padding: 2em;
     }
 
+      .no-bullet {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.no-bullet li {
+  margin-bottom: 0.4em; /* itemize 느낌 */
+}
+      
     /* 제목은 small-caps 절대 금지 → 그냥 보통 굵기만 */
     h1, h2, h3, h4, h5, h6, p.description {
       font-family: inherit;
@@ -105,22 +114,19 @@
 
               <dt>Current Research Interests</dt>
 <dd>
-  <dl class="sublist">
-    <dd>Primary Fields</dd>
-    <dd>Labor Economics, Applied Microeconometrics</dd>
+  <ul class="no-bullet">
+    <li><strong>Primary Fields:</strong> Labor Economics, Applied Microeconometrics</li>
 
-    <dd>Methodologies</dd>
-    <dd>
-      Structural Estimation, Selection Models,<br>
-      Regularization Methods, Micro-simulation
-    </dd>
+    <li><strong>Methodologies:</strong><br>
+        Structural Estimation, Selection Models,<br>
+        Regularization Methods, Micro-simulation
+    </li>
 
-    <dd>Computation &amp; Data</dd>
-    <dd>
-      Numerical Optimization,<br>
-      Machine Learning / Reinforcement Learning Applications
-    </dd>
-  </dl>
+    <li><strong>Computation &amp; Data:</strong><br>
+        Numerical Optimization,<br>
+        Machine Learning / Reinforcement Learning Applications
+    </li>
+  </ul>
 </dd>
 
 
